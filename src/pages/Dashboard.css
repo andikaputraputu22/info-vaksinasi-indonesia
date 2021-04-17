@@ -1,0 +1,33 @@
+.mtop-60 {
+    margin-top: 60px;
+}
+
+.mtop-40 {
+    margin-top: 40px;
+}
+
+.center-vertical {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.card {
+    background-color: #d8dee9;
+    border-radius: 8px;
+    padding: 20px 18px;
+    border: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-clip: border-box;
+}
+
+.custom-total {
+    font-size: 60px;
+    color: darkcyan;
+    margin-top: -15px;
+}
