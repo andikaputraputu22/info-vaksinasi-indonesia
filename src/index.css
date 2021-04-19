@@ -3,3 +3,90 @@ body {
   font-family: 'Poppins', sans-serif;
   color: rgb(76, 86, 106);
 }
+
+.mtop-60 {
+  margin-top: 60px;
+}
+
+.mtop-40 {
+  margin-top: 40px;
+}
+
+.mtop-20 {
+  margin-top: 20px;
+}
+
+.mbot-5 {
+  margin-bottom: 5px;
+}
+
+.override-top {
+  margin-top: -15px;
+  display: block;
+}
+
+.center-vertical {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.card {
+  background-color: #d8dee9;
+  border-radius: 8px;
+  padding: 20px 18px;
+  border: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background-clip: border-box;
+}
+
+.custom-total {
+  font-size: 60px;
+  color: darkcyan;
+  margin-top: -15px;
+}
+
+.custom-amount {
+  font-size: 60px;
+  color: darkcyan;
+  margin-top: -15px;
+}
+
+.custom-subtitle {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.custom-percentace {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.custom-title {
+  font-size: 20px;
+}
+
+.custom-progress {
+  background-color: #eceff4;
+}
+
+.bg-custom-color-progress {
+  background-color: #88c0d0;
+}
+
+footer {
+  height: auto;
+  padding: 40px 0;
+  bottom: 0px;
+}
+
+.footer-content {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
