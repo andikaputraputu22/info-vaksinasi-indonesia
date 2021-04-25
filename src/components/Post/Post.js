@@ -57,7 +57,7 @@ const Post = (props) => {
                     </div>
                 </Col>
                 <Col lg="6" md="6" sm="12" xs="12">
-                    <h5>Vaksinasi Tahap 2</h5>
+                    <h5 className="mtop-title-tahap">Vaksinasi Tahap 2</h5>
                     <div className="card">
                         <h6 className="custom-title">Semua Vaksinasi</h6>
                         <div>

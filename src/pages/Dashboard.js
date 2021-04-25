@@ -98,7 +98,7 @@ class Dashboard extends Component {
             <Container>
                 <div id="content" className="mtop-60">
                     <Row>
-                        <Col lg="6" md="6" sm="12" xs="12">
+                        <Col lg="6" md="6" sm="12" xs="12" className="mbot-title-page">
                             <div>
                                 <small>#AYOVAKSINASI</small>
                                 <h2>Progress Vaksinasi COVID-19 Indonesia</h2>
@@ -107,7 +107,7 @@ class Dashboard extends Component {
                         </Col>
                         <Col lg="6" md="6" sm="12" xs="12">
                             <div className="card">
-                                <h5>Sasaran Vaksinasi:</h5>
+                                <h5 className="custom-title">Sasaran Vaksinasi:</h5>
                                 <span className="custom-total">{this.state.total_sasaran}</span>
                             </div>
                         </Col>

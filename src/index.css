@@ -90,3 +90,65 @@ footer {
   justify-content: center;
   text-align: center;
 }
+
+.mbot-title-page {
+  margin-bottom: 0px;
+}
+
+.mtop-title-tahap {
+  margin-top: 0px;
+}
+
+@media (max-width: 525px) {
+  .mbot-title-page {
+    margin-bottom: 20px;
+  }
+
+  .mtop-title-tahap {
+    margin-top: 40px;
+  }
+
+  .custom-total {
+    font-size: 50px;
+    color: darkcyan;
+    margin-top: -15px;
+  }
+
+  .custom-title {
+    font-size: 18px;
+  }
+
+  .custom-amount {
+    font-size: 50px;
+    color: darkcyan;
+    margin-top: -15px;
+  }
+
+  .custom-percentace {
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .custom-total {
+    font-size: 50px;
+    color: darkcyan;
+    margin-top: -15px;
+  }
+
+  .custom-amount {
+    font-size: 50px;
+    color: darkcyan;
+    margin-top: -15px;
+  }
+
+  .custom-title {
+    font-size: 16px;
+  }
+
+  .custom-percentace {
+    font-size: 15px;
+    font-weight: 300;
+  }
+}
