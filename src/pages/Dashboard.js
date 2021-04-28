@@ -2,13 +2,17 @@ import React, {Component} from 'react';
 import {Container, Row, Col} from 'reactstrap';
 import axios from 'axios';
 import moment from 'moment';
+import {gsap} from 'gsap';
+import {TextPlugin} from 'gsap/TextPlugin';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Post from '../components/Post/Post';
 import Footer from '../components/Footer/Footer';
 
 class Dashboard extends Component {
     state = {
         total_sasaran: "----",
-        vaksinasi_date: "----",
+        vaksinasi_date: "",
         total_vaksin_t1: "----",
         total_vaksin_t2: "----",
         percent_vaksin1: "",
@@ -40,10 +44,18 @@ class Dashboard extends Component {
     }
     
     componentDidMount() {
+        AOS.init({
+            once: true
+        });
+        gsap.registerPlugin(TextPlugin);
+        gsap.to('.hastag', {delay: 1.5, duration: 2, text: '#AYOVAKSINASI'});
+        gsap.to('.title-page', {delay: 3.5, duration: 5, text: 'Progress Vaksinasi COVID-19 Indonesia'});
+        // gsap.from('.title-page', {duration: 1, y: -100, opacity: 0, ease: 'bounce'});
         axios.get('https://cekdiri.id/vaksinasi/')
         .then((response) => {
             var count = response.data.monitoring.length;
-            let data = response.data.monitoring[count - 1]
+            let data = response.data.monitoring[count - 1];
+            gsap.to('.info-date-vaksin', {delay: 7.5, duration: 2, text: this.formattingDate(data.date)});
             this.setState({
                 total_sasaran: this.formattingNumber(data.total_sasaran_vaksinasi),
                 vaksinasi_date: this.formattingDate(data.date),
@@ -100,13 +112,13 @@ class Dashboard extends Component {
                     <Row>
                         <Col lg="6" md="6" sm="12" xs="12" className="mbot-title-page">
                             <div>
-                                <small>#AYOVAKSINASI</small>
-                                <h2>Progress Vaksinasi COVID-19 Indonesia</h2>
-                                <span id="info_date">{this.state.vaksinasi_date}</span>
+                                <small className="hastag"></small>
+                                <div className="title-page"></div>
+                                <span id="info_date" className="info-date-vaksin"></span>
                             </div>
                         </Col>
                         <Col lg="6" md="6" sm="12" xs="12">
-                            <div className="card">
+                            <div className="card" data-aos="fade-up">
                                 <h5 className="custom-title">Sasaran Vaksinasi:</h5>
                                 <span className="custom-total">{this.state.total_sasaran}</span>
                             </div>

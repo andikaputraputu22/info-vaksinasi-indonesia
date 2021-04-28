@@ -8,7 +8,7 @@ const Post = (props) => {
             <Row className="mtop-40">
                 <Col lg="6" md="6" sm="12" xs="12">
                     <h5>Vaksinasi Tahap 1</h5>
-                    <div className="card">
+                    <div className="card" data-aos="fade-up">
                         <h6 className="custom-title">Semua Vaksinasi</h6>
                         <div>
                             <div className="custom-amount">{props.total_vaksin_t1}</div>
@@ -20,7 +20,7 @@ const Post = (props) => {
                         </div>
                     </div>
                     <br/>
-                    <div className="card">
+                    <div className="card" data-aos="fade-up">
                         <h6 className="custom-title">Vaksinasi Lansia</h6>
                         <div>
                             <div className="custom-amount">{props.total_vaksin_lansia_t1}</div>
@@ -32,7 +32,7 @@ const Post = (props) => {
                         </div>
                     </div>
                     <br/>
-                    <div className="card">
+                    <div className="card" data-aos="fade-up">
                         <h6 className="custom-title">Vaksinasi Petugas Publik</h6>
                         <div>
                             <div className="custom-amount">{props.total_vaksin_petugas_t1}</div>
@@ -44,7 +44,7 @@ const Post = (props) => {
                         </div>
                     </div>
                     <br/>
-                    <div className="card">
+                    <div className="card" data-aos="fade-up">
                         <h6 className="custom-title">Vaksinasi Tenaga Kesehatan</h6>
                         <div>
                             <div className="custom-amount">{props.total_vaksin_kesehatan_t1}</div>
@@ -58,7 +58,7 @@ const Post = (props) => {
                 </Col>
                 <Col lg="6" md="6" sm="12" xs="12">
                     <h5 className="mtop-title-tahap">Vaksinasi Tahap 2</h5>
-                    <div className="card">
+                    <div className="card" data-aos="fade-up">
                         <h6 className="custom-title">Semua Vaksinasi</h6>
                         <div>
                             <div className="custom-amount">{props.total_vaksin_t2}</div>
@@ -70,7 +70,7 @@ const Post = (props) => {
                         </div>
                     </div>
                     <br/>
-                    <div className="card">
+                    <div className="card" data-aos="fade-up">
                         <h6 className="custom-title">Vaksinasi Lansia</h6>
                         <div>
                             <div className="custom-amount">{props.total_vaksin_lansia_t2}</div>
@@ -82,7 +82,7 @@ const Post = (props) => {
                         </div>
                     </div>
                     <br/>
-                    <div className="card">
+                    <div className="card" data-aos="fade-up">
                         <h6 className="custom-title">Vaksinasi Petugas Publik</h6>
                         <div>
                             <div className="custom-amount">{props.total_vaksin_petugas_t2}</div>
@@ -94,7 +94,7 @@ const Post = (props) => {
                         </div>
                     </div>
                     <br/>
-                    <div className="card">
+                    <div className="card" data-aos="fade-up">
                         <h6 className="custom-title">Vaksinasi Tenaga Kesehatan</h6>
                         <div>
                             <div className="custom-amount">{props.total_vaksin_kesehatan_t2}</div>

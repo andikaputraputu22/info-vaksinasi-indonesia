@@ -99,6 +99,13 @@ footer {
   margin-top: 0px;
 }
 
+.title-page {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
 @media (max-width: 525px) {
   .mbot-title-page {
     margin-bottom: 20px;
