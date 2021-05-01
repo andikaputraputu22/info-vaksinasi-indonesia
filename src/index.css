@@ -106,6 +106,33 @@ footer {
   line-height: 1.2;
 }
 
+.custom-img-theme {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-theme-light {
+  background-color: #d8dee9;
+  border: none;
+  text-align: center;
+  padding: 5px 8px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.btn-theme-dark {
+  background-color: #3b4252;
+  border: none;
+  text-align: center;
+  padding: 5px 8px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 8px;
+  display: inline-block;
+}
+
 @media (max-width: 525px) {
   .mbot-title-page {
     margin-bottom: 20px;

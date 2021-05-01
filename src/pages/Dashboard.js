@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Row, Col} from 'reactstrap';
+import {Container} from 'reactstrap';
 import axios from 'axios';
 import moment from 'moment';
 import {gsap} from 'gsap';
@@ -55,7 +55,7 @@ class Dashboard extends Component {
         .then((response) => {
             var count = response.data.monitoring.length;
             let data = response.data.monitoring[count - 1];
-            gsap.to('.info-date-vaksin', {delay: 7.5, duration: 2, text: this.formattingDate(data.date)});
+            gsap.to('.info-date-vaksin', {delay: 7.5, duration: 4, text: 'Update terakhir: ' + this.formattingDate(data.date)});
             this.setState({
                 total_sasaran: this.formattingNumber(data.total_sasaran_vaksinasi),
                 vaksinasi_date: this.formattingDate(data.date),
@@ -88,7 +88,7 @@ class Dashboard extends Component {
                 info_vaksin_sdmk_t2: data.cakupan.sdm_kesehatan_vaksinasi2 + " dari " + this.formattingNumber(data.sasaran_vaksinasi_sdmk) + " telah divaksin",
                 cakupan: data.cakupan
             })
-            console.log(data);
+            // console.log(data);
         })
     }
 
@@ -104,26 +104,11 @@ class Dashboard extends Component {
     removePercent = (value) => {
         return value.replace('%', '');
     }
-
+    
     render() {
         return (
             <Container>
-                <div id="content" className="mtop-60">
-                    <Row>
-                        <Col lg="6" md="6" sm="12" xs="12" className="mbot-title-page">
-                            <div>
-                                <small className="hastag"></small>
-                                <div className="title-page"></div>
-                                <span id="info_date" className="info-date-vaksin"></span>
-                            </div>
-                        </Col>
-                        <Col lg="6" md="6" sm="12" xs="12">
-                            <div className="card" data-aos="fade-up">
-                                <h5 className="custom-title">Sasaran Vaksinasi:</h5>
-                                <span className="custom-total">{this.state.total_sasaran}</span>
-                            </div>
-                        </Col>
-                    </Row>
+                <div id="content" className="mtop-20">
                     <Post
                         total_sasaran={this.state.total_sasaran}
                         total_vaksin_t1={this.state.total_vaksin_t1}
